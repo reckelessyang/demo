@@ -9,11 +9,11 @@
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-chat">
 				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
-				<span class="mui-tab-label">消息</span>
+				<span class="mui-tab-label">会员</span>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-contact">
 				<span class="mui-icon mui-icon-contact"></span>
-				<span class="mui-tab-label">通讯录</span>
+				<span class="mui-tab-label">购物车</span>
 			</a>
 			<a class="mui-tab-item" href="#tabbar-with-map">
 				<span class="mui-icon mui-icon-gear"></span>

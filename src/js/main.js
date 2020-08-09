@@ -24,6 +24,27 @@ Vue.use(VueRouter)
 //导入自己的路由
 import router from './router'
 
+//定义全局过滤器
+Vue.filter('dateFormat',function(dateStr,pattern){
+    //根据给定的时间字符串得到特定的时间
+    var dt = new Date(dateStr)
+    var y = dt.getFullYear()
+    var m = (dt.getMonth()+1).toString().padStart(2,'0')
+    var d = dt.getDate().toString().padStart(2,'0')
+
+
+    if(pattern && pattern.toLowerCase() === 'yyyy-mm--dd'){
+        /* return y + '-' + m + '-' +d */
+        //模板字符串
+        return `${y}-${m}-${d}`
+    }else{
+        var hh = dt.getHours().toString().padStart(2,'0')
+        var mm = dt.getMinutes().toString().padStart(2,'0')
+        var ss = dt.getSeconds().toString().padStart(2,'0')
+        return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+    }
+})
+
 const vm = new Vue({
     el:'#app',
     render:c=>c(app),

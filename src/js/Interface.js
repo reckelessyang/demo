@@ -24,8 +24,96 @@ const list = [
     {id : 3 , img : 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596811965931&di=f37d10c1dbcb834dd86ec9b5ac258f09&imgtype=0&src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20190627%2F22%2F1561646870-biwhYdJTZo.jpg'}
 ]
 
+const news = [
+    {
+        id : 1,
+        title:'标题1',
+        add_time:new Date(),
+        zhaiyao:'内容1',
+        click:1,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 2,
+        title:'标题2',
+        add_time:new Date(),
+        zhaiyao:'内容2',
+        click:1,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 3,
+        title:'标题3',
+        add_time:new Date(),
+        zhaiyao:'内容3',
+        click:3,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 4,
+        title:'标题4',
+        add_time:new Date(),
+        zhaiyao:'内容4',
+        click:2,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 5,
+        title:'标题4',
+        add_time:new Date(),
+        zhaiyao:'内容4',
+        click:2,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 6,
+        title:'标题4',
+        add_time:new Date(),
+        zhaiyao:'内容4',
+        click:2,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 7,
+        title:'标题4',
+        add_time:new Date(),
+        zhaiyao:'内容4',
+        click:2,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 8,
+        title:'标题4',
+        add_time:new Date(),
+        zhaiyao:'内容4',
+        click:2,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 9,
+        title:'标题4',
+        add_time:new Date(),
+        zhaiyao:'内容4',
+        click:2,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    },
+    {
+        id : 10,
+        title:'标题4',
+        add_time:new Date(),
+        zhaiyao:'内容4',
+        click:2,
+        img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
+    }
+ 
+]
+
 app.get('/index',(req,res)=>{
     res.send(list)
+})
+
+app.get('/news',(req,res)=>{
+    res.send(news)
 })
 
 app.listen(5000,()=>{

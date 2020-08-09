@@ -29,4 +29,11 @@
         使用overflow-x:hidden保证不移动，不用overflow是保证后面下拉能正常使用
         -实现切换页面时下一次页面的内容能在最滑动时就出现下一次页面
         应在v-leave-to里面设置position:absolute
+    
+## 改造新闻资讯路由链接
+
+## 新闻资讯页面制作
+    +绘制界面
+    +使用vue-resource获取数据
+    +渲染真实数据
 

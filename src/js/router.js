@@ -4,7 +4,8 @@ import HomeContainer from '../component/tabbar/HomeContainer.vue'
 import VipContainer from '../component/tabbar/VipContainer.vue'
 import ShopcarContainer from '../component/tabbar/ShopcarContainer.vue'
 import SearchContainer from '../component/tabbar/SearchContainer.vue'
-import NewsList from '../component/news/newList.vue'
+import NewsList from '../component/news/NewsList.vue'
+import NewsInfo from '../component/news/NewsInfo.vue'
 
 const router = new VueRouter({
     routes:[
@@ -13,9 +14,10 @@ const router = new VueRouter({
         { path: '/vip', component: VipContainer },
         { path: '/shopcar', component: ShopcarContainer },
         { path: '/search', component: SearchContainer },
-        { path: '/home/newList', component: NewsList }
+        { path: '/home/newslist', component: NewsList },
+        { path: '/home/newsinfo/:id', component: NewsInfo }
     ],
-    linkActiveClass:'mui-active'    //覆盖默认路由高亮的类，默认的类角坐router-link-active
+    linkActiveClass:'mui-active'    //覆盖默认路由高亮的类，默认的类叫router-link-active
 })
 
 export default router

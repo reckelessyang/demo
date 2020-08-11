@@ -28,7 +28,7 @@ const news = [
     {
         id : 1,
         title:`今年 Jordan Brand 的骚操作！新火焰红 AJ3 上脚效果你打几分`,
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容1',
         click:1,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -36,7 +36,7 @@ const news = [
     {
         id : 2,
         title:'四年才出一双的神秘 AJ！还是罕见中国限定！明早记得抢！',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容2',
         click:1,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -44,7 +44,7 @@ const news = [
     {
         id : 3,
         title:'科比生日传闻有惊喜！8 月的 AJ 新品还有蛇纹芝加哥、湖人、UNION 联名！',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容3',
         click:3,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -52,7 +52,7 @@ const news = [
     {
         id : 4,
         title:'标题4',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容4',
         click:2,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -60,7 +60,7 @@ const news = [
     {
         id : 5,
         title:'标题4',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容4',
         click:2,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -68,7 +68,7 @@ const news = [
     {
         id : 6,
         title:'标题4',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容4',
         click:2,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -76,7 +76,7 @@ const news = [
     {
         id : 7,
         title:'标题4',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容4',
         click:2,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -84,7 +84,7 @@ const news = [
     {
         id : 8,
         title:'标题4',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容4',
         click:2,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -92,7 +92,7 @@ const news = [
     {
         id : 9,
         title:'标题4',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容4',
         click:2,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -100,7 +100,7 @@ const news = [
     {
         id : 10,
         title:'标题4',
-        add_date_time:new Date(),
+        add_date_time:Date.now(),
         zhaiyao:'内容4',
         click:2,
         img_url:'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1596949070&di=a92eefe385b3bebd307797de3b0babb8&src=http://b-ssl.duitang.com/uploads/item/201805/20/20180520132639_mhnoq.thumb.224_0.jpg'
@@ -120,7 +120,7 @@ const content = [
         <p>最讨喜的地方还要算后跟的 Nike Air 与 Jumpman 跳跳人双标合体，上脚效果不经意间的个性释放，让人过目不忘！</p>
         <img src="http://www2.flightclub.cn/news/uploads/allimg/200808/6-200PP94135.jpg" alt="">
         <p>相信随着铺货范围逐渐增多，市价相对会有所回落，国内进一步发售信息我们将密切留意，感兴趣的小伙伴不妨再耐心等待一下啦！</p>`,
-        date_date_time:new Date(),
+        date_date_time:Date.now(),
         click:3
     
     },
@@ -232,7 +232,7 @@ const content = [
         好看好搭又好穿，算是近年来一款难得佳作。<br />
         <br />
         如果你喜欢中国风球鞋，一定能感受到它扑面而来的细腻诚意。<br />`,
-        date_date_time:new Date(),
+        date_date_time:Date.now(),
         click:3
     },
     {
@@ -428,35 +428,43 @@ const content = [
         <div style="text-align: center;">货号：CZ6431-100<br />
         发售日期：8 月 27 日<br />
         发售价格：$200 美元</div>`,
-        date_date_time:new Date(),
+        date_date_time:Date.now(),
         click:3
     }
 ]
 
 const comments = [
-    {id:1,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:2,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:3,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:4,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:5,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:6,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:7,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:8,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:9,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'},
-    {id:10,name:'reckelessyang',date_time:new Date(),content:'我要买，冲！！'}
+    {id:1,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:2,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:3,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:4,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:5,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:6,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:7,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:8,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:9,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:10,name:'reckelessyang',date_time:Date.now(),content:'我要买，冲！！'}
 ]
 
 const comments1 = [
-    {id:1,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:2,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:3,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:4,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:5,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:6,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:7,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:8,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:9,name:'John',date_time:new Date(),content:'我要买，冲！！'},
-    {id:10,name:'John',date_time:new Date(),content:'我要买，冲！！'}
+    {id:1,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:2,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:3,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:4,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:5,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:6,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:7,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:8,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:9,name:'John',date_time:Date.now(),content:'我要买，冲！！'},
+    {id:10,name:'John',date_time:Date.now(),content:'我要买，冲！！'}
+]
+
+const title = [
+    {id:1,title:'全部'},
+    {id:2,title:'Nike'},
+    {id:3,title:'Jordon'},
+    {id:4,title:'vans'},
+    {id:5,title:'Adidas'}
 ]
 
 app.get('/index',(req,res)=>{
@@ -487,14 +495,20 @@ app.get('/comment',(req,res)=>{
 
 app.post('/postcomment/:id',(req,res)=>{
     console.log(req.params)
-    if(req.params.id === '1'){
-        req.body.date_time = new Date()
-        req.body.id = comments.length+1
-        comments.unshift(req.body)
-        res.send(comments[0])
-    }else if(req.params.id === '2'){
-        res.send('这是第二个帖子')
+    switch (req.params.id) {
+        case '1':
+            req.body.date_time = Date.now()
+            req.body.id = comments.length+1
+            comments.unshift(req.body)
+            res.send(comments[0])
+            break;    
+        default:
+            break;
     }
+})
+
+app.get('/getphoto',(req,res)=>{
+    res.send(title)
 })
 
 app.listen(5000,()=>{

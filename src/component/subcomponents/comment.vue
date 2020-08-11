@@ -53,12 +53,18 @@ export default {
             }
             //发表评论 trim()
             this.$http.post("http://localhost:5000/postcomment/"+this.id,
-            {content:this.msg.trim(), name:'匿名傻仔'})
+            {content:this.msg.trim(), name:'匿名用户'})
             .then(data=>{
-                this.comments.unshift(data)   
-                this.getComment()           
+                var obj = {
+                    name:"匿名用户",
+                    date_time:Date.now(),
+                    content:this.msg.trim()
+                }
+                //因为是异步，所以限制性完这里的代码可能异步操作再执行，所以可以先添加，异步往后台添加
+                this.comments.unshift(obj)
+                this.msg = ""
+                
             })
-            this.msg = ''
 
         }
     },

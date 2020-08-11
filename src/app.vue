@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        <mt-header fixed title="购物车项目"></mt-header>
+        <mt-header fixed title="Shoes"></mt-header>
         
 		<transition>
 		<router-view></router-view>

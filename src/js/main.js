@@ -19,6 +19,16 @@ Vue.component(Button.name, Button)
 import '../lib/mui/css/mui.css'
 import '../lib/mui/css/icons-extra.css'
 
+//引入Vue Ydui
+import 'vue-ydui/dist/ydui.base.css'
+import {ListTheme, ListItem, ListOther} from 'vue-ydui/dist/lib.px/list';
+import {ScrollNav, ScrollNavPanel} from 'vue-ydui/dist/lib.px/scrollnav'
+Vue.component(ScrollNav.name, ScrollNav)
+Vue.component(ScrollNavPanel.name, ScrollNavPanel)
+Vue.component(ListTheme.name, ListTheme);
+Vue.component(ListItem.name, ListItem);
+Vue.component(ListOther.name, ListOther);
+
 //导入路由组件
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)

@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        <mt-header fixed title="Shoes"></mt-header>
+        <mt-header fixed title="Sneaker"></mt-header>
         
 		<transition>
 		<router-view></router-view>
@@ -44,6 +44,7 @@ export default {
 	.v-enter{
 		opacity: 0;
 		transform: translateX(100%);
+		position: absolute;
 	}
 	.v-leave-to{
 		opacity: 0;
@@ -52,6 +53,15 @@ export default {
 	}
 	.v-enter-active,.v-leave-active{
 		transition: all 0.5s ease;
+	}
+	.mint-header-title{
+		color: pink;
+		font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-size: 30px;
+	}
+	.is-fixed{
+		background-image: linear-gradient(to right, #434343 0%, black 100%);
+		opacity: .8;
 	}
 </style>
 

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h3>新闻列表</h3>
         <ul class="mui-table-view">
 				<li class="mui-table-view-cell mui-media" v-for="item in newList" :key="item.id">
@@ -8,7 +8,7 @@
 						<div class="mui-media-body">
 							<h1>{{item.title}}</h1>
 							<p class='mui-ellipsis'>
-                                <span>发表时间: <span>{{item.add_time | dateFormat('yyyy-mm--dd')}}</span></span>
+                                <span>发表时间: <span>{{item.date_time | dateFormat('yyyy-mm--dd')}}</span></span>
                                 <span>点击: <span>{{item.click}}</span>次</span>
                             </p>
 						</div>
@@ -45,6 +45,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+
 .mui-table-view{
     li{
         h1{
@@ -57,5 +58,9 @@ export default {
             justify-content: space-between;
         }
     }
+}
+h3{
+    text-align: center;
+    font-size: 30px;
 }
 </style>

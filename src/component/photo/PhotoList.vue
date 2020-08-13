@@ -2,13 +2,12 @@
     <div>
         <!-- 顶部滑动条 -->
     <yd-scrollnav>
-        <yd-scrollnav-panel :style="{margin:'30px 0px'}" :label="item.title" v-for="(item,key) in phototitle" :key="key">
-          
+        <yd-scrollnav-panel :style="{margin:'30px 0px'}" :label="item.title" v-for="(item,key) in phototitle" :key="key">        
             <p>{{item.title}}</p>
             <yd-list :theme="1">
-                <yd-list-item v-for="i in 10" :key="i">
-                    <img slot="img" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2910748489,1515877704&fm=26&gp=0.jpg">
-                    <span slot="title">{{item.title}}</span>
+                <yd-list-item v-for="(item,i) in item.img" :key="i">
+                    <img slot="img" :src="item.src">
+                    <span slot="title">{{item.name}}</span>
                 </yd-list-item>
             </yd-list>
   
@@ -22,7 +21,8 @@
 export default {
   data () {
     return {
-		phototitle:[]
+    phototitle:[]
+
     };
   },
   created(){
@@ -44,7 +44,8 @@ export default {
   background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 .yd-scrollnav-tab{
-	margin-top: 30px;
+	margin-top: 40px;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%) !important;
 	li{
 		font-size: 20px;
 	}	
@@ -53,12 +54,13 @@ export default {
 	font-size: 20px;
 }
 .yd-scrollnav-content{
+  margin-bottom: 20px;
   background-color: #cccccc;
   p{
     text-align: center;
     font-size: 30px;
     color: black;
-    font-weight: bolder; 
+    font-weight: bolder;
   }
   .yd-list-mes
   {
@@ -69,6 +71,7 @@ export default {
   .yd-list-img{
     img{
       margin-top: -50px;;
+      box-shadow: 0 0 6px #999;
     }
   }
 }

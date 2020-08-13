@@ -29,6 +29,11 @@ Vue.component(ListTheme.name, ListTheme);
 Vue.component(ListItem.name, ListItem);
 Vue.component(ListOther.name, ListOther);
 
+//Vue-preview
+import VuePreview from'vue-preview'
+
+Vue.use(VuePreview) 
+
 //导入路由组件
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)

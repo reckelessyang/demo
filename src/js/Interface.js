@@ -459,6 +459,57 @@ const comments1 = [
     {id:10,name:'John',date_time:new Date(),content:'我要买，冲！！'}
 ]
 
+const goods = [
+    {
+        id:1,
+        src:'https://qx.flightclub.cn/img/upload/20200806_212def0b517cd13d25c3ef4c17b54117.jpg',
+        name:'Nike Dunk Low Samba',
+        new_price:1599,
+        old_price:1499,
+        quantity:60
+    },
+    {
+        id:2,
+        src:'https://qx.flightclub.cn/img/upload/20200806_e492a1212faaa44d0f463fc49a163459.jpg',
+        name:'Nike Kobe 5 Protro Lakers',
+        new_price:1599,
+        old_price:1499,
+        quantity:60
+    },
+    {
+        id:3,
+        src:'http://dunkhome-production.oss-cn-hangzhou.aliyuncs.com/static_files/2020-05-17/EtedsXa4hWsR7JkWdSeq_image_wh_840x590.jpeg',
+        name:'adidas Superstar',
+        new_price:1599,
+        old_price:1499,
+        quantity:60
+    },
+    {
+        id:4,
+        src:'http://dunkhome-production.oss-cn-hangzhou.aliyuncs.com/static_files/2020-04-04/rM61gExn3vZEVyS-L_o2_image_wh_840x578.jpeg',
+        name:'adidas Stan Smith',
+        new_price:1599,
+        old_price:1499,
+        quantity:60
+    },
+    {
+        id:5,
+        src:'https://qx.flightclub.cn/img/upload/20200806_51733ee2a05f5b6bbaae1fe9ea79d972.jpg',
+        name:'Air Jordan 5 反转新鲜王子',
+        new_price:1599,
+        old_price:1499,
+        quantity:60
+    },
+    {
+        id:6,
+        src:'http://www2.flightclub.cn/news/uploads/allimg/200804/6-200P4111028.jpg',
+        name:'《辛普森一家》 x Vans',
+        new_price:1599,
+        old_price:1499,
+        quantity:60
+    },
+    
+]
 const title = [
     {id:1,title:'Nike',
     img:[
@@ -526,6 +577,81 @@ const title = [
     ]       
 }
 ]
+const dunksb = [
+    {
+        id:1,
+        img:'http://p4.itc.cn/images01/20200525/a7dc85c2eb244ca5b2b314fa54c5dd5c.jpeg',       
+
+    },
+    {   id:2,
+        img:'http://p0.itc.cn/images01/20200525/dd5d4297df6a4ae9a0efea89af2af460.jpeg'
+    },{
+        id:3,
+        img:'http://p3.itc.cn/images01/20200525/59cd005c8fab4eb88bd05e811c5a3ce4.jpeg'
+    }
+]
+
+const kobe5 = [
+        {
+        id:1,
+        img:'http://dunkhome-production.oss-cn-hangzhou.aliyuncs.com/static_files/2020-02-23/GzMLCTs7C6s1PqhCPKzC_image_wh_840x569.jpeg',       
+
+    },
+    {   id:2,
+        img:'http://dunkhome-production.oss-cn-hangzhou.aliyuncs.com/static_files/2020-02-23/jr6zYquxUPAtVN6ymreT_image_wh_840x549.jpeg'
+    },{
+        id:3,
+        img:'http://dunkhome-production.oss-cn-hangzhou.aliyuncs.com/static_files/2020-02-23/ogfBBBQH7atxwW7DyfBM_image_wh_840x519.jpeg'
+    }
+]
+
+const goodsInfo = [
+    {
+        id:1,
+        title:'nike dunk low',
+        goods_no:'zzzzzzzzzzzzz',
+        quantity:999,
+        sell_date:'2020-10-1',
+        market_value:2010,
+        Selling_value:1499
+    },
+    {
+        id:2,
+        title:'kobe 5 lakers',
+        goods_no:'xxxxxxxxx',
+        quantity:666,
+        sell_date:'2020-10-1',
+        market_value:2500,
+        Selling_value:1499
+    }
+]
+app.get('/goodsinfo/info/:id',(req,res)=>{
+    switch (req.params.id) {
+        case '1':
+            res.send(goodsInfo[0])
+            break;
+            case '2':
+                res.send(goodsInfo[1])
+                break;
+    
+        default:
+            break;
+    }
+})
+
+app.get('/gooodsinfo/lunbotu/:id',(req,res)=>{
+    switch (req.params.id) {
+        case '1':
+            res.send(dunksb)
+            break;
+        case '2':
+            res.send(kobe5)
+            break;
+    
+        default:
+            break;
+    }
+})
 
 app.get('/index',(req,res)=>{
     res.send(list)
@@ -569,6 +695,10 @@ app.post('/postcomment/:id',(req,res)=>{
 
 app.get('/getphoto',(req,res)=>{
     res.send(title)
+})
+
+app.get('/getgoods',(req,res)=>{
+    res.send(goods)
 })
 
 app.listen(5000,()=>{

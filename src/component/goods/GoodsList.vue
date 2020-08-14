@@ -1,54 +1,40 @@
 <template>
     <div class="goods-list">
-        <div class="goods-item">
-            <img src="https://qx.flightclub.cn/img/upload/20200806_51733ee2a05f5b6bbaae1fe9ea79d972.jpg" alt="">
-            <h1 class="title">Air Jordan 5 反转新鲜王子</h1>
+        <router-link tag="div" :to="'/home/goodsinfo/'+item.id" class="goods-item" v-for="item in goods" :key="item.id">
+            <img :src="item.src" alt="">
+            <h1 class="title">{{item.name}}</h1>
             <div class="info">
                 <p class="price">
-                    <span class="now">￥1599</span>
-                    <span class="old">￥1499</span>
+                    <span class="now">￥{{item.new_price}}</span>
+                    <span class="old">￥{{item.old_price}}</span>
                 </p>
                 <p class="sell">
                     <span>热卖中</span>
-                    <span>剩60件</span>
+                    <span>剩{{item.quantity}}件</span>
                 </p>
             </div>
-        </div>
-
-    <div class="goods-item">
-        <img src="https://qx.flightclub.cn/img/upload/20200806_51733ee2a05f5b6bbaae1fe9ea79d972.jpg" alt="">
-        <h1 class="title">Air Jordan 5 反转新鲜王子</h1>
-        <div class="info">
-            <p class="price">
-                <span class="now">￥1599</span>
-                <span class="old">￥1499</span>
-            </p>
-            <p class="sell">
-                <span>热卖中</span>
-                <span>剩60件</span>
-            </p>
-        </div>
-    </div>
-    <div class="goods-item">
-            <img src="https://qx.flightclub.cn/img/upload/20200806_51733ee2a05f5b6bbaae1fe9ea79d972.jpg" alt="">
-            <h1 class="title">Air Jordan 5 反转新鲜王子</h1>
-            <div class="info">
-                <p class="price">
-                    <span class="now">￥1599</span>
-                    <span class="old">￥1499</span>
-                </p>
-                <p class="sell">
-                    <span>热卖中</span>
-                    <span>剩60件</span>
-                </p>
-            </div>
-        </div>
+        </router-link>
     </div>  
 </template>
 
 <script>
 export default {
-    
+    data () {
+        return {
+            goods:[]
+        }
+    },
+    created(){
+        this.getgoods()
+    },
+    methods: {
+        getgoods(){
+            this.$http.get('http://localhost:5000/getgoods')
+            .then(data=>{
+                this.goods = data.body
+            })
+        }
+    }
 }
 </script>
 
@@ -58,11 +44,32 @@ export default {
     flex-wrap: wrap;
     .goods-item{
         width: 45%;
-        margin: 0 0 0 10px;
+        margin: 30px 0 0 10px;
+        padding: 2px;
+        background-color: #eeeeee;
         img{
             width: 100%;
             
         }
+    .info{
+        margin-top: 10px;
+        .price{
+            .now{
+                color: red;
+                font-size: 16px;
+            }
+            .old{
+                text-decoration: line-through;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+        }
+            .sell{
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+            }
+    }
 }
 }
 

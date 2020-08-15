@@ -23,16 +23,17 @@ import '../lib/mui/css/icons-extra.css'
 import 'vue-ydui/dist/ydui.base.css'
 import {ListTheme, ListItem, ListOther} from 'vue-ydui/dist/lib.px/list';
 import {ScrollNav, ScrollNavPanel} from 'vue-ydui/dist/lib.px/scrollnav'
+import {Spinner} from 'vue-ydui/dist/lib.px/spinner'
 Vue.component(ScrollNav.name, ScrollNav)
 Vue.component(ScrollNavPanel.name, ScrollNavPanel)
 Vue.component(ListTheme.name, ListTheme);
 Vue.component(ListItem.name, ListItem);
 Vue.component(ListOther.name, ListOther);
+Vue.component(Spinner.name, Spinner);
 
-//Vue-preview
-import VuePreview from'vue-preview'
+import {Lazyload} from 'vant'
+Vue.use(Lazyload)
 
-Vue.use(VuePreview) 
 
 //导入路由组件
 import VueRouter from 'vue-router'

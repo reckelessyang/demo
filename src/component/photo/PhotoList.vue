@@ -45,6 +45,7 @@ export default {
 }
 .yd-scrollnav-tab{
 	margin-top: 40px;
+ 
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%) !important;
 	li{
 		font-size: 20px;
@@ -75,5 +76,8 @@ export default {
     }
   }
 }
-
+.yd-scrollnav-unfold
+{
+  display: none;
+}
 </style>

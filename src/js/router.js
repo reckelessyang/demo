@@ -9,6 +9,7 @@ import NewsInfo from '../component/news/NewsInfo.vue'
 import PhotoList from '../component/photo/PhotoList.vue'
 import GoodList from '../component/goods/GoodsList.vue'
 import GoodsInfo from '../component/goods/GoodsInfo.vue'
+import GoodsDesc from '../component/goods/GoodsDesc.vue'
 
 const router = new VueRouter({
     routes:[
@@ -21,7 +22,8 @@ const router = new VueRouter({
         { path: '/home/newsinfo/:id', component: NewsInfo },
         { path: '/home/photoslist', component: PhotoList },
         { path: '/home/goodslist', component: GoodList },
-        { path: '/home/goodsinfo/:id', component: GoodsInfo,props:true }//启用props来接收传来的id
+        { path: '/home/goodsinfo/:id', component: GoodsInfo,props:true },//启用props来接收传来的id
+        { path: '/home/goodsdesc/:id', component: GoodsDesc,props:true,name:'goodsdesc' }
     ],
     linkActiveClass:'mui-active'    //覆盖默认路由高亮的类，默认的类叫router-link-active
 })

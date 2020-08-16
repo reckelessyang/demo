@@ -44,6 +44,9 @@ import router from './router'
 //全局设置post时候表单数据格式
 Vue.http.options.emulateJSON = true
 
+//导入状态管理对象
+import store from './store.js'
+
 //定义全局过滤器
 Vue.filter('dateFormat',function(dateStr,pattern){
     //根据给定的时间字符串得到特定的时间
@@ -68,6 +71,7 @@ Vue.filter('dateFormat',function(dateStr,pattern){
 const vm = new Vue({
     el:'#app',
     render:c=>c(app),
-    router
+    router,
+    store
     
 })

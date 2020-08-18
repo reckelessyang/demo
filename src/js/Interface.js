@@ -671,7 +671,8 @@ const goodsInfo = [
         quantity:10,
         sell_date:'2020-10-1',
         market_value:2010,
-        Selling_value:1499
+        Selling_value:1499,
+        img:"http://p0.itc.cn/images01/20200525/dd5d4297df6a4ae9a0efea89af2af460.jpeg"
     },
     {
         id:2,
@@ -680,7 +681,8 @@ const goodsInfo = [
         quantity:10,
         sell_date:'2020-10-1',
         market_value:2500,
-        Selling_value:1499
+        Selling_value:1499,
+        img:"http://dunkhome-production.oss-cn-hangzhou.aliyuncs.com/static_files/2020-02-23/jr6zYquxUPAtVN6ymreT_image_wh_840x549.jpeg"
     },
     {
         id:3,
@@ -689,7 +691,8 @@ const goodsInfo = [
         quantity:10,
         sell_date:'2020-10-1',
         market_value:699,
-        Selling_value:799
+        Selling_value:799,
+        img:"https://images.s.cn/images/goods/20191213/032709e8e81cfddc.jpg"
     },
     {
         id:4,
@@ -698,7 +701,8 @@ const goodsInfo = [
         quantity:10,
         sell_date:'2020-10-1',
         market_value:699,
-        Selling_value:799
+        Selling_value:799,
+        img:"https://images.s.cn/images/wenzhangpic/20160719/c0f0179597dee9aa.jpg"
     },
     {
         id:5,
@@ -707,7 +711,8 @@ const goodsInfo = [
         quantity:10,
         sell_date:'2020-10-1',
         market_value:1799,
-        Selling_value:1499
+        Selling_value:1499,
+        img:"http://www2.flightclub.cn/news/uploads/allimg/200813/12-200Q3142953-50.jpg"
     },
     {
         id:6,
@@ -716,7 +721,8 @@ const goodsInfo = [
         quantity:10,
         sell_date:'2020-10-1',
         market_value:1299,
-        Selling_value:799
+        Selling_value:799,
+        img:"http://www.meiletao.com/zb_users/upload/2020/08/202008041596511129383018.jpg"
     }
 ]
 
@@ -794,6 +800,18 @@ const goodsDesc = [
         <p>上月末，美乐淘潮牌汇曾报道过滑板品牌 Vans 即将携手《<strong>辛普森一家</strong>》打造联乘的消息，近期该系列终于完整公布。</p><p style="text-align:center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511106893839.jpg" title="Vans x《辛普森一家》全新联名系列-1.jpg" style="text-align: center; white-space: normal;"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511106432927.jpg" style="" title="Vans x《辛普森一家》全新联名系列-2.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511106277724.jpg" style="" title="Vans x《辛普森一家》全新联名系列-5.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511106337958.jpg" style="" title="Vans x《辛普森一家》全新联名系列-4.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511107189659.jpg" style="" title="Vans x《辛普森一家》全新联名系列-6.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511107978190.jpg" style="" title="Vans x《辛普森一家》全新联名系列-3.jpg"/></p><p>此番 <strong>Vans</strong> 选取了 Sk8-Hi、 Old Skool 以及 Slip-On Pro 等 5 款鞋型重塑，并在其中融入了剧中的 5 位家庭成员形象，另外还搭配了腰包、鸭舌帽、T-Shirt 等服饰。</p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511129605546.jpg" style="" title="Vans x《辛普森一家》全新联名系列-7.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511129398618.jpg" style="" title="Vans x《辛普森一家》全新联名系列-8.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511129383018.jpg" style="" title="Vans x《辛普森一家》全新联名系列-9.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511129139045.jpg" style="" title="Vans x《辛普森一家》全新联名系列-11.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511129790119.jpg" style="" title="Vans x《辛普森一家》全新联名系列-12.jpg"/></p><p style="text-align: center"><img src="http://www.meiletao.com/zb_users/upload/2020/08/202008041596511129136747.jpg" style="" title="Vans x《辛普森一家》全新联名系列-10.jpg"/></p><p><strong>Vans x《辛普森一家》全新联名系列</strong>将在本月 7 日于 Vans 官网开启贩售，等待已久的粉丝们可要提前做好准备哟~</p>				</div>`
     }
 ]
+app.get('/goodsinfo/car/:id',(req,res)=>{
+    //console.log(req.params.id)
+    let arr = []
+    arr = req.params.id.split(',')
+    //console.log(arr)
+    let showGoods = []
+    arr.forEach(item=>{
+        showGoods.push(goodsInfo[+item -1])
+    })
+    res.send(showGoods)
+})
+
 app.get('/goods/getdesc/:id',(req,res)=>{
     switch (req.params.id) {
         case '1':

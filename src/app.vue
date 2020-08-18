@@ -21,7 +21,7 @@
 			</router-link>
 			<router-link class="mui-tab-item" to="/shopcar">
 				<span class="mui-icon  mui-icon-extra mui-icon-extra-cart">
-					<span class="mui-badge" id="badge">0</span>
+					<span class="mui-badge" id="badge">{{totalcount}}</span>
 				</span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
 	data () {
 		return {
@@ -64,6 +65,9 @@ export default {
 				this.flag = true
 			}
 		}
+	},
+	computed: {
+		...mapGetters(["totalcount"])
 	}
 }
 </script>

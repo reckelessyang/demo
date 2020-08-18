@@ -60,6 +60,9 @@ module.exports = {
       }
     ]
   },
+  node: {
+    fs: 'empty'
+  },
   resolve:{
     alias: {
       //设置vue被导入时候包的路径

@@ -1,7 +1,6 @@
 <template>
       <div>
         <yd-spinner :max="max" unit="1" v-model="spinner1"></yd-spinner>
-        <span>{{spinner1}}</span>
     </div>
 </template>
 <script >

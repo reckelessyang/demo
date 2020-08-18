@@ -98,7 +98,10 @@ export default {
     addGoodscar(){
       this.flag = !this.flag
       this.count = this.$refs.count.$data.spinner1
-      console.log(this.count)
+      //调用mutations中的addToCar
+      this.$store.commit("addToCar",{id:this.id,count:this.count})
+
+      
     },
     beforeEnter(el){
         el.style.transform = 'translate(0,0)'

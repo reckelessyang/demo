@@ -10,11 +10,13 @@ Vue.use(VueResourve)
 //按需导入mint-UI中的组件
 import {Header} from 'mint-ui'
 import { Swipe, SwipeItem,Button } from 'mint-ui';
+import { Switch } from 'mint-ui';
 
 Vue.component(Header.name,Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 Vue.component(Button.name, Button)
+Vue.component(Switch.name, Switch);
 //引入mui组件
 import '../lib/mui/css/mui.css'
 import '../lib/mui/css/icons-extra.css'
@@ -24,17 +26,18 @@ import 'vue-ydui/dist/ydui.base.css'
 import {ListTheme, ListItem, ListOther} from 'vue-ydui/dist/lib.px/list';
 import {ScrollNav, ScrollNavPanel} from 'vue-ydui/dist/lib.px/scrollnav'
 import {Spinner} from 'vue-ydui/dist/lib.px/spinner'
-import {Switch} from 'vue-ydui/dist/lib.px/switch';
+//import {Switch} from 'vue-ydui/dist/lib.px/switch';
 Vue.component(ScrollNav.name, ScrollNav)
 Vue.component(ScrollNavPanel.name, ScrollNavPanel)
 Vue.component(ListTheme.name, ListTheme);
 Vue.component(ListItem.name, ListItem);
 Vue.component(ListOther.name, ListOther);
 Vue.component(Spinner.name, Spinner);
-Vue.component(Switch.name, Switch);
+//Vue.component(Switch.name, Switch);
 
 import {Lazyload} from 'vant'
 Vue.use(Lazyload)
+
 
 
 //导入路由组件

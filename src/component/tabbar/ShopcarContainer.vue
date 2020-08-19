@@ -4,14 +4,16 @@
             <div class="mui-card">
                     <div class="mui-card-content">
                         <div class="mui-card-content-inner goods-item">
-                            <yd-switch v-model="switch1"></yd-switch>
+                            <!-- 开关 -->
+                            <!-- <yd-switch @click="changeSelect(item.id,seletedObj[item.id])" v-model="seletedObj[item.id]"></yd-switch -->
+                            <mt-switch @change="changeSelect(item.id,seletedObj[item.id])" v-model="seletedObj[item.id]"></mt-switch>
                             <img :src="item.img">
                             <div class="info">
                                 <h1>{{item.title}}</h1>
                                 <div class="goods-info">
                                     <span class="price">￥{{item.Selling_value}}</span>
-                                    <nobox :initcount='countObj[item.id]'></nobox>
-                                    <a href="#">删除</a>
+                                    <nobox :id="item.id" :initcount='countObj[item.id]'></nobox>
+                                    <a href="#" @click.prevent = 'del(item.id)'>删除</a>
                                 </div>
                             </div>
                         </div>
@@ -40,31 +42,55 @@
 
 <script>
 import nobox from '../subcomponents/shopcar_nobox.vue'
-import {mapGetters} from 'vuex'
+import {mapGetters,mapMutations} from 'vuex'
 export default {
     data () {
         return {
             switch1: true,
-            goodslist:[]    //商品列表
+            goodslist:[],    //商品列表
         }
     },
     created () {
-        this.getGoodList()
-        
+        this.getGoodList()       
+    },
+    mounted () {
+        this.count = this.countObj
+        console.log(this.count)
+        console.log(this.seletedObj)
     },
     methods: {
+        ...mapMutations(['delFromCart','changeSelectState']),
     getGoodList(){
+        if(this.idstr<=0){
+            return
+        }
         this.$http.get('http://localhost:5000/goodsinfo/car/'+this.idstr)
         .then(data=>{
             this.goodslist = data.body
         })
-        }
+        },
+        //从界面删除
+    del(id){
+        //删除商品
+        console.log(id)
+        this.goodslist.some((item,i)=>{
+            if(item.id == id){
+                this.goodslist.splice(i,1)
+                return true
+            }
+        })
+        this.delFromCart(id)
+    },
+    changeSelect(id,select){
+        //更改开关状态
+        this.changeSelectState({id,selected:select})
+    }
     },
     components: {
         nobox
     },
     computed: {
-        ...mapGetters(['idstr','countObj'])
+        ...mapGetters(['idstr','countObj','seletedObj'])
     }
 }
 </script>

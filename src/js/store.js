@@ -28,7 +28,38 @@ const store = new Vuex.Store({
             }
             //为了持久化存储购物车数据，可以把购物车的商品序列化出来存储到localStorage中
             localStorage.setItem('cart', window.JSON.stringify(state.cart))
+        },
+        updateGoodsCount(state,goods){
+            //根据传递过来的商品的信息，更新购物车中商品的数量
+            state.cart.some(item=>{
+                if(item.id == goods.id){
+                    item.count = goods.count
+                    return true
+                }
+                localStorage.setItem('cart', window.JSON.stringify(state.cart))
+            })
+        },
+        //删除要处处的localstorage
+        delFromCart(state,id){
+            state.cart.some((item,i)=>{
+                if(item.id = id){
+                    state.cart.splice(i,1)
+                    return true;
+                }
+            })
+            //重新序列化
+            localStorage.setItem('cart', window.JSON.stringify(state.cart))
+        },
+        changeSelectState(state,obj){
+            state.cart.some(item=>{
+                if(item.id == obj.id){
+                    item.selected = obj.selected
+                    return true
+                }
+            })
+            localStorage.setItem('cart', window.JSON.stringify(state.cart))
         }
+
     },
     //类似于computed属性
     getters:{
@@ -47,6 +78,12 @@ const store = new Vuex.Store({
             //获取商品购物车中商品的Id和商品数量的键值对
             let o = {}
             state.cart.forEach(item=>o[item.id]=item.count)
+            return o
+        },
+        seletedObj(state){
+            //id对应的商品是否被选中
+            let o = {}
+            state.cart.forEach(item=>o[item.id]=item.selected)
             return o
         }
     }

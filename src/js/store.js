@@ -59,7 +59,6 @@ const store = new Vuex.Store({
             })
             localStorage.setItem('cart', window.JSON.stringify(state.cart))
         }
-
     },
     //类似于computed属性
     getters:{
@@ -85,6 +84,26 @@ const store = new Vuex.Store({
             let o = {}
             state.cart.forEach(item=>o[item.id]=item.selected)
             return o
+        },
+        selectedcount(state){
+            //勾选商品的数量
+            let c = 0
+            state.cart.forEach(item=>{
+                if(item.selected){
+                    c+=item.count
+                }
+            })
+            return c
+        },
+        amount(state){
+            //总价
+            let c = 0;
+            state.cart.forEach(item=>{
+                if(item.selected){
+                    c+=item.count*item.price
+                }
+            })
+            return c
         }
     }
 })

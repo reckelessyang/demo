@@ -99,7 +99,7 @@ export default {
       this.flag = !this.flag
       this.count = this.$refs.count.$data.spinner1
       //调用mutations中的addToCar
-      this.$store.commit("addToCar",{id:this.id,count:this.count,selected:true})
+      this.$store.commit("addToCar",{id:this.id,count:this.count,selected:true,price:this.goodsinfo.Selling_value})
 
       
     },

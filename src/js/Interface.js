@@ -804,7 +804,7 @@ app.get('/goodsinfo/car/:id',(req,res)=>{
     //console.log(req.params.id)
     let arr = []
     arr = req.params.id.split(',')
-    //console.log(arr)
+    console.log(arr)
     let showGoods = []
     arr.forEach(item=>{
         showGoods.push(goodsInfo[+item -1])

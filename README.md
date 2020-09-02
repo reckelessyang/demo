@@ -1,6 +1,9 @@
 # 这是一个购物车项目
 
-## 我的第一个入门项目
+## 自己用node的express插件创建了信息的接口，可以用node打开Interface.js这个文件获取后端信息
+当前终端
+`cd ./src/js`
+`node Interface.js` 开启接口
 
 ## 制作首页App组件
 1、完成Header区域，使用的是Mint-UI中的Header组件
